@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-httpd
+  labels:
+    app: pod-httpd
+    env: dev
+spec:
+  restartPolicy: Never
+  containers:
+    - name: pod-httpd
+      image: httpd
+      ports: 
+        - containerPort: 80
+          protocol: TCP
+          
+      
+      
